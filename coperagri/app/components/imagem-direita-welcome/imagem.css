@@ -1,0 +1,8 @@
+#imagem-direita-welcome{
+    background-image: url('../../imagens/Thumb-Boletim-Agro-header.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 500px;
+    width: 100%;
+    height: 100%;
+}
