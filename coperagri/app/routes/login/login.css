@@ -1,6 +1,100 @@
-.login{
-    top: -10px;
-    display: flex;
-    justify-content: space-around;
+body{
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+    margin-top: -8px;
+    margin-right: -8px;
+    margin-left: -8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.btn-voltar{
+    margin-top: 1%;
+    margin-left: 1%;
+    text-decoration: none;
+    border: 1px solid rgb(0, 94, 0);
+    color: rgb(0, 94, 0);
+    padding: 10px;
+    max-height: 20vh;
+    max-width: 50vw;
+    border-radius: 5px;
+    transition: .5s;
+}
+.btn-voltar:hover{
+    background-color:  rgb(0, 94, 0);
+    color: white;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.322);
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-text{
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 50vw;
+    border: 1px solid rgb(0, 94, 0);
+    outline: none;
+}
+
+.btn-versenha{
+    max-width: 150px;
+    margin: 5px;
+    background-color: rgb(0, 94, 0);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    transition: .5s;
+    cursor: pointer;
+    outline: none;
+}
+.btn-versenha:hover{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.322);
+}
+
+.input-submit{
+    max-width: 50vw;
+    background-color: rgb(0, 94, 0);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    transition: .5s;
+    cursor: pointer;
+    outline: none;
+}
+.input-submit:hover{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.322);
+}
+
+.right {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    max-width: 50vw;
+    object-fit: cover;
 }

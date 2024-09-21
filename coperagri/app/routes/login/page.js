@@ -14,7 +14,7 @@ export default function Login(){
     const [email, setEmail] = useState('')
     const [showPassword, setShowPassword] = useState(false)
 
-    const GoLogin = (e)=>{
+    const FunLogin = (e)=>{
         e.preventDefault()
 
         if(
@@ -32,38 +32,40 @@ export default function Login(){
 
     return(
     <>
-        <div className="login">
-            <div id="left">
-                <Link href='/'>Voltar</Link>
-                <Welcome/>
-                <h3>Faça o Login</h3>
-                <form onSubmit={GoLogin}>
-                    <label>
-                        <span>Nome</span>
-                        <input type="text" onChange={(e)=>{setName(e.target.value)}}/>
-                    </label>
-                    <br/>
-                    <label>
-                        <span>CPF</span>
-                        <input type="text" onChange={(e)=>{setCpf(e.target.value)}}/>
-                    </label>
-                    <br/>
-                    <label>
-                        <span>Email</span>
-                        <input type="text" onChange={(e)=>{setEmail(e.target.value)}}/>
-                    </label>
-                    <br/>
-                    <label>
-                        <span>Senha</span>
-                        <input type={showPassword ? 'text' : 'password'} onChange={(e)=>{setSenha(e.target.value)}}/>
-                    </label>
-                    <button onClick={(e)=>{setShowPassword(!showPassword)}}>{showPassword == true? 'esconder senha' : 'ver senha'}</button>
-                    <br/>
-                    <input type="submit" value="Entrar"/>
-                </form>
+        <div className="main">
+            <Link className='btn-voltar' href='/'>&larr;</Link>
+            <div className="left">
+                <Welcome className='welcome'/>
+                <div className="login">
+                    <h3>Faça o Login</h3>
+                    <form onSubmit={FunLogin}>
+                        <label>
+                            <span>Nome</span>
+                            <input className="input-text" type="text" onChange={(e)=>{setName(e.target.value)}}/>
+                        </label>
+                        <br/>
+                        <label>
+                            <span>CPF</span>
+                            <input className="input-text" type="text" onChange={(e)=>{setCpf(e.target.value)}}/>
+                        </label>
+                        <br/>
+                        <label>
+                            <span>Email</span>
+                            <input className="input-text" type="text" onChange={(e)=>{setEmail(e.target.value)}}/>
+                        </label>
+                        <br/>
+                        <label>
+                            <span>Senha</span>
+                            <input className="input-text" type={showPassword ? 'text' : 'password'} onChange={(e)=>{setSenha(e.target.value)}}/>
+                        </label>
+                        <button className="btn-versenha" onClick={()=>{setShowPassword(!showPassword)}}>{showPassword == true? 'esconder senha' : 'ver senha'}</button>
+                        <br/>
+                        <input className="input-submit" type="submit" value="Entrar"/>
+                    </form>
+                </div>
             </div>
-            <div id="right">
-                <Imagem/>
+            <div className="right">
+                <Imagem className='img-right'/>
             </div>
         </div>
     </>
