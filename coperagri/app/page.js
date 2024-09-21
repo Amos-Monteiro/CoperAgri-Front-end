@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div className={styles.teste}>
         <Link href='/routes/login'>Login</Link>
     </div>
   );
