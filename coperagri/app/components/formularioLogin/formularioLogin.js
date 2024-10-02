@@ -9,27 +9,47 @@ export default function FormularioLogin(){
     const [name, setName] = useState('')
     const [senha, setSenha] = useState('')
     const [email, setEmail] = useState('')
+    const [error, setError] = useState(null)
     const [showPassword, setShowPassword] = useState(false)
 
-    const FunCadastro = (e)=>{
-        e.preventDefault()
+    const FunLogin =  async (e) => {
+        e.preventDefault();
+        
+        // Configurando o body da requisição
+        const loginData = {
+            email: email,
+            senha: senha
+        };
 
-        if(
-            name.length > 0 &&
-            cpf.length > 0 &&
-            senha.length > 0 &&
-            email.length > 0
-        ){
-            console.log(name, cpf, senha, email)
+        try {
+            const response = await fetch('http://localhost:8080/users/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(loginData),
+            });
+
+            // Verifica se o login foi bem-sucedido
+            if (response.ok) {
+                const data = await response.json();
+                // Armazena o token JWT (por exemplo, no localStorage)
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('id', data.id);
+                alert('Login bem-sucedido!');
+            } else {
+                setError("Login falhou. Verifique suas credenciais.");
+            }
+        } catch (error) {
+            console.error("Erro na requisição:", error);
+            setError("Ocorreu um erro ao tentar realizar o login.");
         }
-        else{
-            console.log('Preencha todos os campos!')
-        }
+    
     }
 
     return(
     <>
-        <form onSubmit={FunCadastro}>
+        <form onSubmit={FunLogin}>
             <label>
                 <span><strong>Email</strong></span>
                 <input placeholder='Digite o email...' className="input-text" type="email" onChange={(e)=>{setEmail(e.target.value)}}/>
