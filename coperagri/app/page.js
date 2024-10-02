@@ -1,35 +1,51 @@
 'use client'
-import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+
+import Image from "next/image";
+import LoginImg from './imagens/Loginicon.png'
+import Logo from './imagens/logo.png'
+import  ImgRodape from  './imagens/imgAnteriorRodape.png'
+import  Imgheader from  './imagens/PlantacaoMilho.png'
+
 
 import Rodape from "./components/rodape/rodape";
 
 export default function Home() {
   return (
-    <div className={styles.teste}>
+    <div className={styles.Home}>
 
+        <header className={styles.header}>
+        <Image
+            src={Imgheader}
+            alt="plantação de milho imagem"
+            width={1395}
+            height={150}
+          />
+
+        </header>
      
-        <div className='acessoLogin'>
+        <div className={styles.acessoLogin}>
           <Image
-            src="/imagens/Loginicon.png"
+            src={LoginImg}
             alt="Ícone de Login"
             width={50}
-            height={50}
+            height={45}
+            
           />
-          <Link className='linkLogin' href="/routes/login">Fazer Login</Link>
+          <Link className={styles.linkLogin} href="/routes/login">Fazer Login</Link>
         </div>
 
-        <div className='imgContainer'>
+        <div className={styles.imgContainer}>
           <Image
-            src="/imagens/1.png"
+            src={Logo}
             alt="CoperAgri logo"
-            width={200}
-            height={100}
+            width={175}
+            height={200}
           />
         </div>
 
-        <div className='ParagrafoContainer'>
+        <div className={styles.ParagrafoContainer}>
           <p>
             Somos uma empresa de tecnologia focada em inovações logísticas para a agricultura familiar,
             priorizando soluções sustentáveis que beneficiam as famílias que dependem da agricultura.
@@ -41,6 +57,16 @@ export default function Home() {
             contribuindo para o ODS 12. Nossa abordagem fortalece cadeias produtivas locais e incentiva um
             desenvolvimento econômico inclusivo e sustentável.
           </p>
+        </div>
+
+        <div className='imgRodape'>
+        <Image
+            src={ImgRodape}
+            alt="Imagem logo programas sociais"
+            width={250}
+            height={93}
+          />
+
         </div>
 
         <Rodape className='rodape' />
