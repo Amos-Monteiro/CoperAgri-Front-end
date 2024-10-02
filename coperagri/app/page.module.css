@@ -1,3 +1,19 @@
-.teste{
-  background-color: yellow;
+.Home{
+  margin-bottom: auto;
+  text-align: center;
+   
+}
+
+.header{
+  width: 100%;
+  margin-bottom: 1%;
+  border-radius: 4%;
+  padding: auto;
+  position: relative;
+}
+
+.acessoLogin{
+  position: relative;
+  margin-left: 90%;
+  justify-content: space-between;
 }
