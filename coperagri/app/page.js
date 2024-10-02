@@ -36,16 +36,16 @@ export default function Home() {
           <Link className={styles.linkLogin} href="/routes/login">Fazer Login</Link>
         </div>
 
-        <div className='imgContainer'>
+        <div className={styles.imgContainer}>
           <Image
             src={Logo}
             alt="CoperAgri logo"
-            width={200}
-            height={100}
+            width={175}
+            height={200}
           />
         </div>
 
-        <div className='ParagrafoContainer'>
+        <div className={styles.ParagrafoContainer}>
           <p>
             Somos uma empresa de tecnologia focada em inovações logísticas para a agricultura familiar,
             priorizando soluções sustentáveis que beneficiam as famílias que dependem da agricultura.
