@@ -23,7 +23,8 @@ export default function Login(){
             <hr/>
             {login == true ? <FormLogin/> : <FormCadastro/>}
         </div>
-        <Rodape className='rodape'/>
+
+       {/* <Rodape className='rodape'/> */ }
     </div>
     )
 }

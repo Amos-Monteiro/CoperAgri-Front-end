@@ -16,11 +16,13 @@ export default function Home() {
     <div className={styles.Home}>
 
         <header className={styles.header}>
+
         <Image
             src={Imgheader}
             alt="plantação de milho imagem"
             width={1395}
             height={150}
+          
           />
 
         </header>
@@ -31,22 +33,26 @@ export default function Home() {
             alt="Ícone de Login"
             width={50}
             height={45}
+          
             
           />
           <Link className={styles.linkLogin} href="/routes/login">Fazer Login</Link>
         </div>
 
-        <div className={styles.imgContainer}>
-          <Image
+        
+
+        <div className={styles.ParagrafoContainer}>
+
+          <div className={styles.imgContainer}>
+           <Image
             src={Logo}
             alt="CoperAgri logo"
             width={175}
             height={200}
           />
-        </div>
+          </div>
 
-        <div className={styles.ParagrafoContainer}>
-          <p>
+          <p className={styles.Paragrafo}>
             Somos uma empresa de tecnologia focada em inovações logísticas para a agricultura familiar,
             priorizando soluções sustentáveis que beneficiam as famílias que dependem da agricultura.
             Nosso trabalho está alinhado com os Objetivos de Desenvolvimento Sustentável (ODS), especialmente
@@ -57,17 +63,20 @@ export default function Home() {
             contribuindo para o ODS 12. Nossa abordagem fortalece cadeias produtivas locais e incentiva um
             desenvolvimento econômico inclusivo e sustentável.
           </p>
-        </div>
 
-        <div className='imgRodape'>
-        <Image
+          <div className='imgRodape'>
+            <Image
             src={ImgRodape}
             alt="Imagem logo programas sociais"
             width={250}
             height={93}
-          />
+            />
+
+        </div> 
 
         </div>
+
+        
 
         <Rodape className='rodape' />
      
