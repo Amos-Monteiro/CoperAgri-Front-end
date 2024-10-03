@@ -1,0 +1,7 @@
+.cabecalho{
+    display: flexbox;
+    align-items: flex-start;
+    max-width: 100%;
+    
+
+}

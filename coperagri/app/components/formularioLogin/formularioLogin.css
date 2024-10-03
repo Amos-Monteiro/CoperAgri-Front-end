@@ -3,7 +3,7 @@ form{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 50vw;
+    width:50vw;
     height: 50vh;
 }
 
@@ -34,12 +34,13 @@ label{
     outline: none;
 }
 .btn-versenha:hover{
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.322);
+    box-shadow: 3px 3px 3px rgba(7, 219, 131, 0.322);
 }
 
 .input-submit{
     max-width: 50vw;
-    background-color: grey;
+    background-color: #079C0D;
+
     color: white;
     border-radius: 10px;
     padding: 15px;

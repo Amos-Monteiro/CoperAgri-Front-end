@@ -26,7 +26,8 @@ body{
     transition: .5s;
 }
 .btn-voltar:hover{
-    background-color:  black;
+    background-color:   #079C0D;
+    ;
     color: white;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.322);
 }
